@@ -21,6 +21,6 @@ Note that the first two requirements can be satisfied by deploying a "Deep Learn
 
 Load the Jupyter notebook from this repository in your CNTK Python 3.5 environment, and you're all set!
 
-# Contributing
+## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
