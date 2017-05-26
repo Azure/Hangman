@@ -1,5 +1,10 @@
 @if "%SCM_TRACE_LEVEL%" NEQ "4" @echo off
 
+:: This shell script heavily inspired by Ilia Karmanov's example:
+:: https://github.com/ilkarman/Azure-WebApp-w-CNTK
+::
+:: Feel free to use newer wheels of your own if you like.
+
 SET NUMPY_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/numpy-1.13.0-cp35-cp35m-win_amd64.whl
 SET SCIPY_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/scipy-0.19.0-cp35-cp35m-win_amd64.whl
 SET CNTK_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/cntk-2.0-cp35-cp35m-win_amd64.whl
@@ -96,5 +101,9 @@ D:\home\Python35\Python.exe -m pip install --upgrade %SCIPY_WHEEL%
 D:\home\Python35\Python.exe -m pip install --upgrade %CNTK_WHEEL%
 D:\home\Python35\Python.exe -m pip install --upgrade pillow
 D:\home\Python35\Python.exe -m pip install --upgrade flask
+
+curl https://mawahstorage.blob.core.windows.net/cntkwebapp/binaries/cntk.zip > cntk.zip
+unzip cntk.zip
+rm cntk.zip
 
 echo Finished running custom deploy command successfully.

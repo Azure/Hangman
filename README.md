@@ -15,6 +15,7 @@ For this project, we trained a neural network to play Hangman by appropriately g
    - [Prerequisites](#opprereq)
    - [Deploying an Azure Web App](#deploy)
    - [Web App Setup](#setup)
+   - [Playing Hangman](#gameplay)
 
 Note that it is not necessary to complete the "Training" section before completing the "Operationalization" section, as a sample trained model is provided.
 
@@ -100,6 +101,7 @@ You will use local git deployment to deploy the code from a local folder to your
    1. Copy the value in the "GIT URL" field on the Properties pane and store it locally; you will use this value shortly.
 
 Once the web app is configured, complete the steps below to configure git locally:
+1. (Optional) If you trained your own NN using the Jupyter notebook in this repo and would like to use it on the website, copy your `hangman_model.dnn` file to the folder `<repo-filepath>\webapp\models` to overwrite our example model.
 1. Open a command prompt (e.g. by clicking the Windows icon and typing "cmd").
 1. Navigate to the `webapp` folder in your local copy of the git repository:
    ```cd <repo-filepath>\webapp```
@@ -107,8 +109,20 @@ Once the web app is configured, complete the steps below to configure git locall
    ```git init
       git remote add azure <git-url-stored-earlier>
       git add .
-      git commit -m"Install necessary Python packages"```
+      git commit -m"Install necessary Python packages"
+      git push azure master```
+   You will be asked to supply the git credentials you chose earlier.
 
+The push step will take a few minutes to run. When it completes, your website is ready for use!
+
+<a name="gameplay"></a>a>
+### Playing Hangman
+
+To use your web app, navigate to `http://<your web app's resource name>.azurewebsites.net`. After a few seconds of initial loading, you should see a website asking you to choose a secret word for the neural network to guess. You're responsible for remembering the secret word, but you will need to tell the neural network how long the word is.
+
+After specifying the length and clicking Submit, the neural network's first letter guess will be displayed. It's up to you to tell the neural network whether (and if so, where) the letter appears in the word. After providing this feedback, click Submit to begin the next round.
+
+After each round, the neural network's lives remaining is updated, and the neural network makes another guess. Eventually the neural network either guesses the entire word or runs out of lives.
 
 ## Contributing
 
