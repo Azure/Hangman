@@ -1,0 +1,28 @@
+<h1>Let the games begin: the NN guessed "{{ guess }}"!</h1>
+
+<p>The NN saw "{{ ' '.join(current_view) }}" and guessed the letter "{{ guess }}".</p>
+<p>Click the positions where the letter "{{ guess }}" appears in the secret word (if applicable), then press Submit to begin the next round.</p>
+
+<form action='/feedback' method='post'>
+	<table>
+		{% for current_char in current_view %}
+			<tr>
+			{% if current_char == '_' %}
+				<td><input type="checkbox" name="present" value="letter{{ loop.index0 }}"></td>
+			{% else %}
+				<td> </td>
+			{% endif %}
+			    <td>{{ loop.index0 + 1 }})</td>
+				<td>{{ current_char }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<input type="hidden" name="last_guess" value="{{ guess }}">
+	<input type='submit'></input>
+</form>
+<br/>
+<div style="text-align: center;">
+	<form action='/' method='get'>
+		<input type='submit' value='Start Over'></input>
+	</form>
+</div>
