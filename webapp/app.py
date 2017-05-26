@@ -70,9 +70,6 @@ def feedback():
 		idx = int(i.split('letter')[1])
 		current_view[idx] = str(request.form['last_guess']).upper()
 
-	guess = get_next_guess(current_view, letters_guessed)
-	letters_guessed.add(guess)
-
 	if lives_remaining == 0:
 		return render_template('gameover.html',
 							   guess=guess,
@@ -86,6 +83,8 @@ def feedback():
 							   current_view=current_view,
 							   letters_guessed=letters_guessed)
 	else:
+		guess = get_next_guess(current_view, letters_guessed)
+		letters_guessed.add(guess)
 		return render_template('feedback.html',
 							   guess_result=guess_result,
 							   lives_remaining=lives_remaining,
