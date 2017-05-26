@@ -14,6 +14,7 @@ For this project, we trained a neural network to play Hangman by appropriately g
 - [Operationalization](#op)
    - [Prerequisites](#opprereq)
    - [Deploying an Azure Web App](#deploy)
+   - [Web App Setup](#setup)
 
 Note that it is not necessary to complete the "Training" section before completing the "Operationalization" section, as a sample trained model is provided.
 
@@ -66,6 +67,48 @@ We will create an Azure Web App to serve a website containing our neural network
    1. Click "Create".
 
 Deployment may take a few minutes to complete. To monitor deployment, navigate to your resource group by typing its name in the search bar at the top of the Azure Portal website. Refresh until the "App Service" resource (your web app) appears in the resource group contents.
+
+
+<a name="setup"></a>
+### Web App Setup
+
+Once your web app's deployment is complete, navigate to its overview pane (e.g. by clicking on the "App Service" resource in your resource group). The steps below will install necessary Python packages on the web app and upload the model files and website code from your local computer.
+
+#### Install the Python 3.5.2 x64 Extension
+
+The web app comes with Python 2.7 and 3.4 (x86) available by default. We install Python 3.5 x64 to meet the requirements of CNTK.
+
+1. In the search bar at the upper left of your web app's overview pane, type in "Extensions" and click on the search result.
+1. Click the "+ Add" button.
+1. Scroll through the list of extensions to find and click on "Python 3.5.2 x62".
+1. Review and accept the legal terms by clicking "OK".
+1. Click "OK" to initiate the installation of the extension.
+1. After a moment, refresh the page to confirm that the extension has installed successfully. (You may receive an Azure notification that the installation timed out even if the install completes successfully.)
+
+#### Configure Local Git Deployment
+
+You will use local git deployment to deploy the code from a local folder to your web app. The first step in this process is to configure the settings on your web app.
+
+1. In the search bar at the upper left of your web app's overview pane, type in "Deployment options" and click on the search result.
+1. Click on "Choose Source" and select "Local Git Repository".
+1. Click "OK".
+1. Choose appropriate credentials for git deployment. (NOTE: you may not need to complete this step if you have previously created deployment credentials on Azure.)
+   1. In the search bar at the upper left of your web app's overview pane, type in "Deployment credentials" and click on the search result.
+   1. Choose an appropriate username and password for connecting to your web app and other Azure resources. Click "Save" to store your credentials.
+1. Note the Git URL
+   1. In the search bar at the upper left of your web app's overview pane, type in "Properties" and click on the search result.
+   1. Copy the value in the "GIT URL" field on the Properties pane and store it locally; you will use this value shortly.
+
+Once the web app is configured, complete the steps below to configure git locally:
+1. Open a command prompt (e.g. by clicking the Windows icon and typing "cmd").
+1. Navigate to the `webapp` folder in your local copy of the git repository:
+   ```cd <repo-filepath>\webapp```
+1. Execute the commands below to create a local git repo and push a commit.
+   ```git init
+      git remote add azure <git-url-stored-earlier>
+      git add .
+      git commit -m"Install necessary Python packages"```
+
 
 ## Contributing
 
