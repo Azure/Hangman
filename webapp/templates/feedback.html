@@ -1,6 +1,11 @@
 <h1>The NN guessed "{{ guess }}"!</h1>
 
 <p>In the last round, the NN guessed {{ guess_result }}. Now the NN has {{ lives_remaining }} lives remaining.</p>
+
+<div style="text-align: center;">
+	<img src="../images/{{ 10 - lives_remaining }}.PNG" width="300 px" />
+</div>
+
 <p>In this round, the NN saw "{{ ' '.join(current_view) }}" and guessed the letter "{{ guess }}".</p>
 <p>Click the positions where the letter "{{ guess }}" appears in the secret word (if applicable), then press Submit to begin the next round.</p>
 
