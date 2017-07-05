@@ -115,7 +115,7 @@ Once the web app is configured, complete the steps below to configure git locall
 
 The push step will take a few minutes to run. When it completes, your website is ready for use!
 
-<a name="gameplay"></a>a>
+<a name="gameplay"></a>
 ### Playing Hangman
 
 To use your web app, navigate to `http://<your web app's resource name>.azurewebsites.net`. After a few seconds of initial loading, you should see a website asking you to choose a secret word for the neural network to guess. You're responsible for remembering the secret word, but you will need to tell the neural network how long the word is.
