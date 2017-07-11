@@ -109,6 +109,7 @@ Once the web app is configured, complete the steps below to configure git locall
       git add .
       git commit -m"Install necessary Python packages"
       git push azure master```
+   
    You will be asked to supply the git credentials you chose earlier.
 
 The push step will take a few minutes to run. When it completes, your website is ready for use!
