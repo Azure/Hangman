@@ -81,7 +81,7 @@ The web app comes with Python 2.7 and 3.4 (x86) available by default. We install
 
 1. In the search bar at the upper left of your web app's overview pane, type in "Extensions" and click on the search result.
 1. Click the "+ Add" button.
-1. Scroll through the list of extensions to find and click on "Python 3.5.2 x62".
+1. Scroll through the list of extensions to find and click on "Python 3.5.2 x64".
 1. Review and accept the legal terms by clicking "OK".
 1. Click "OK" to initiate the installation of the extension.
 1. After a moment, refresh the page to confirm that the extension has installed successfully. (You may receive an Azure notification that the installation timed out even if the install completes successfully.)
