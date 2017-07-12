@@ -103,7 +103,7 @@ D:\home\Python35\Python.exe -m pip install --upgrade pillow
 D:\home\Python35\Python.exe -m pip install --upgrade flask
 
 curl https://mawahstorage.blob.core.windows.net/cntkwebapp/binaries/cntk.zip > cntk.zip
-unzip cntk.zip
+unzip cntk.zip -d D:\home\site\wwwroot
 rm cntk.zip
 
 echo Finished running custom deploy command successfully.
