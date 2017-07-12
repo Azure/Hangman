@@ -102,8 +102,4 @@ D:\home\python353x64\python.exe -m pip install --upgrade %CNTK_WHEEL%
 D:\home\python353x64\python.exe -m pip install --upgrade pillow
 D:\home\python353x64\python.exe -m pip install --upgrade flask
 
-curl https://mawahstorage.blob.core.windows.net/cntkwebapp/binaries/cntk.zip > cntk.zip
-unzip cntk.zip -d D:\home\site\wwwroot
-rm cntk.zip
-
 echo Finished running custom deploy command successfully.
