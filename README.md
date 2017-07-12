@@ -92,7 +92,9 @@ You will use local git deployment to deploy the code from a local folder to your
 
 1. In the search bar at the upper left of your web app's overview pane, type in "Deployment options" and click on the search result.
 1. Click on "Choose Source" and select "Local Git Repository".
-1. If you have not used local Git deployments on Azue previously, you will see a section that says "Setup connection" where you must choose a username and password for connecting to Azure via `git`. Note that these login credentials distinct from your GitHub account, if you have one. Choose a username and password you will remember: you will use the same login for other local Git deployments on Azure in the future. (Note that you will have the option to change this login in the future.)
+1. If you have not used local Git deployments on Azure previously, you will see a section that says "Setup connection" where you must choose a username and password for connecting to Azure via `git`.
+    1. Note that these login credentials are distinct from your GitHub account, if you have one.
+    1. Choose a username and password you will remember: the same login will be automatically associated with local Git deployments on Azure that you create in the future. (Note that you will have the option to change this login in the future.)
 1. Click "OK". (There is no need to configure the Performance Test.)
 1. Find the Git URL:
    1. In the search bar at the upper left of your web app's overview pane, type in "Properties" and click on the search result.
