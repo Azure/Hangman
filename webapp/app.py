@@ -44,11 +44,11 @@ def start():
 	current_view = ['_'] * num_chars
 	letters_guessed = set([])
 	
-	# Get the model's guess (need to add CNTK code; hardcode for now)
+	# Get the model's guess
 	guess = get_next_guess(current_view, letters_guessed)
 	letters_guessed.add(guess)
 
-	# Display the page where the user can provide feedback.
+	# Display the page where the user can provide feedback on the guess
 	return render_template('start.html',
 						   guess=guess,
 						   lives_remaining=lives_remaining,
