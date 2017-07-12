@@ -5,7 +5,7 @@
 ::
 :: Feel free to use newer wheels of your own if you like.
 
-SET NUMPY_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/cntk-2.0-cp35-cp35m-win_amd64.whl
+SET NUMPY_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/numpy-1.13.1mkl-cp35-cp35m-win_amd64.whl
 SET SCIPY_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/scipy-0.19.1-cp35-cp35m-win_amd64.whl
 SET CNTK_WHEEL=https://mawahstorage.blob.core.windows.net/cntkwebapp/wheels/cntk-2.0-cp35-cp35m-win_amd64.whl
 
