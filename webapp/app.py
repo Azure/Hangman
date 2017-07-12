@@ -72,13 +72,13 @@ def feedback():
 
 	if lives_remaining == 0:
 		return render_template('gameover.html',
-							   guess=guess,
+							   guess=request.form['last_guess'],
 							   lives_remaining=lives_remaining,
 							   current_view=current_view,
 							   letters_guessed=letters_guessed)
 	elif '_' not in current_view:
 		return render_template('win.html',
-							   guess=guess,
+							   guess=request.form['last_guess'],
 							   lives_remaining=lives_remaining,
 							   current_view=current_view,
 							   letters_guessed=letters_guessed)
