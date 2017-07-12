@@ -1,6 +1,6 @@
 import os
 from flask import Flask, request, render_template
-os.environ['PATH'] = r'D:\home\site\wwwroot\cntk;' + os.environ['PATH']
+os.environ['PATH'] = r'D:\home\python353x64;' + os.environ['PATH']
 import cntk
 import numpy as np
 
