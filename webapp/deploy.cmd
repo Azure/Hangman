@@ -95,12 +95,12 @@ exit /b 1
 :end
 endlocal
 
-echo Installing Python 3.5 wheels (hope you installed the Python 3.5.2 extension!)
-D:\home\Python35\Python.exe -m pip install --upgrade %NUMPY_WHEEL%
-D:\home\Python35\Python.exe -m pip install --upgrade %SCIPY_WHEEL%
-D:\home\Python35\Python.exe -m pip install --upgrade %CNTK_WHEEL%
-D:\home\Python35\Python.exe -m pip install --upgrade pillow
-D:\home\Python35\Python.exe -m pip install --upgrade flask
+echo Installing Python 3.5 wheels (hope you installed the Python 3.5.3 extension!)
+D:\home\python353x64\python.exe -m pip install --upgrade %NUMPY_WHEEL%
+D:\home\python353x64\python.exe -m pip install --upgrade %SCIPY_WHEEL%
+D:\home\python353x64\python.exe -m pip install --upgrade %CNTK_WHEEL%
+D:\home\python353x64\python.exe -m pip install --upgrade pillow
+D:\home\python353x64\python.exe -m pip install --upgrade flask
 
 curl https://mawahstorage.blob.core.windows.net/cntkwebapp/binaries/cntk.zip > cntk.zip
 unzip cntk.zip -d D:\home\site\wwwroot
