@@ -75,7 +75,7 @@ Deployment may take a few minutes to complete. To monitor deployment, navigate t
 
 Once your web app's deployment is complete, navigate to its overview pane (e.g. by clicking on the "App Service" resource in your resource group). The steps below will install necessary Python packages on the web app and upload the model files and website code from your local computer.
 
-#### Install the Python 3.5.2 x64 Extension
+#### Install the Python 3.5.3 x64 Extension
 
 The web app comes with Python 2.7 and 3.4 (x86) available by default. We install Python 3.5 x64 to meet the requirements of CNTK.
 
