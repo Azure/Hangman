@@ -52,7 +52,7 @@ Load the Jupyter notebook -- `Train a Neural Network to Play Hangman.ipynb` -- f
 <a name="deploy"></a>
 ### Deploying an Azure Web App
 
-We will create an Azure Web App to serve a website containing our neural network. To deploy a web app:
+We will create an Azure Web App to serve a website containing our neural network. The Web Apps feature of Microsoft Azure App Service is optimized for hosting websites and web applications. To deploy a web app:
 1. Log into [Azure Portal](https://portal.azure.com).
 1. Click the "+ New" button at upper-left.
 1. In the search bar, type in "Web App" and press Enter.
@@ -86,14 +86,14 @@ The web app comes with Python 2.7 and 3.4 (x86) available by default. We install
 1. Click "OK" to initiate the installation of the extension.
 1. After a moment, refresh the page to confirm that the extension has installed successfully. (You may receive an Azure notification that the installation timed out even if the install completes successfully.)
 
-#### Configure Local Git Deployment
+#### [Configure Local Git Deployment](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-deploy-local-git)
 
-You will use local git deployment to deploy the code from a local folder to your web app. The first step in this process is to configure the settings on your web app.
+You will deploy your app to Azure App Service from a Git repository on your local computer. App Service supports this approach with the Local Git deployment option in the Azure Portal. The first step in this process is to enable the App service app repository.
 
 1. In the search bar at the upper left of your web app's overview pane, type in "Deployment options" and click on the search result.
 1. Click on "Choose Source" and select "Local Git Repository".
-1. If you have not used local Git deployments on Azure previously, you will see a section that says "Setup connection" where you must choose a username and password for connecting to Azure via `git`.
-    1. Note that these login credentials are distinct from your GitHub account, if you have one.
+1. If you have not set up a repository in Azure before, you will need to create login credentials for it. You will see a section that says "Setup connection" where you must choose a username and password. You will use them to log into the Azure repository and push changes from your local Git repository. 
+    1. Note that these login credentials are distinct from your github.com account and are used only for logging into Azure repository. They are also different from your Azure subscription credentials.
     1. Choose a username and password you will remember: the same login will be automatically associated with local Git deployments on Azure that you create in the future. (Note that you will have the option to change this login in the future.)
 1. Click "OK". (There is no need to configure the Performance Test.)
 1. Find the Git URL:
@@ -110,11 +110,11 @@ Once the web app is configured, complete the steps below to configure git locall
    git init
    git remote add azure <git-url-stored-earlier>
    git add .
-   git commit -m"Install necessary Python packages"
+   git commit -m "Install necessary Python packages"
    git push azure master
    ```
    
-You will be asked to supply the git credentials you chose earlier. The push step will take a few minutes to run. When it completes, your website is ready for use!
+You will be asked to supply the git credentials you chose earlier. By following the steps above you successfully published your app to App Service using Local Git. The push step will take a few minutes to run. When it completes, you have deployed your project and your website is ready for use!
 
 <a name="gameplay"></a>
 ### Playing Hangman
